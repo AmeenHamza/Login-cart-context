@@ -14,9 +14,9 @@ function Cart() {
 
   return (
     <>
-      <span style={{ fontSize: 30 }}>My cart</span>
+      <span className='text-center mt-4 fw-bold text-primary d-block' style={{ fontSize: 30 }}>My cart</span>
       <br />
-      <span style={{ fontSize: 30 }}>Total : Rs. {total}</span>
+      <span className='text-center fw-bold text-primary d-block' style={{ fontSize: 30 }}>Total : Rs. {total}</span>
       <div className="container">
         <div className="row justify-content-evenly">
           {

@@ -11,13 +11,8 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email)
-        console.log(password)
         setUser(true);
-        console.log(user);
     }
-
-    console.log(user);
 
     if (user) return <Logout />
 

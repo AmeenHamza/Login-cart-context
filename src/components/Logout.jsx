@@ -3,10 +3,11 @@ import { cartContext } from '../context/Context'
 
 function Logout() {
 
-    const { setUser } = useContext(cartContext);
+    const { setUser, setCart } = useContext(cartContext);
 
     const handleLogout = () => {
         setUser(false);
+        setCart([]);
     }
 
     return (
