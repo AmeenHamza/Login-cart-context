@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from './components/Header';
 import Home from './components/Home';
 import Cart from './components/Cart';
@@ -21,15 +21,15 @@ export const App = () => {
           user ? (
             <>
               <Route path="/logout" element={<Logout />} />
-              <Route path="*" element={<Home />} />
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="*" element={<Navigate to="/" replace={true} />} />
             </>
           ) : (
             <>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
-              <Route path="*" element={<Login />} />
+              <Route path="*" element={<Navigate to="/login" replace={true} />} />
             </>
           )
         }
